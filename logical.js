@@ -134,3 +134,22 @@ function removeDuplicate (arr){
   return [...new Set(arr)]
 }
 console.log (removeDuplicate([1,2,3,3,2,1,4]))
+
+// second largest in an array
+function findSecondLargest (arr){
+  let max = -Infinity
+  let secondMax = -Infinity
+  
+  arr.reduce ((_ , num)=>{
+    if (num > max){
+      secondMax = max
+      max = num
+    }
+    else if (num > secondMax && num !== max){
+      secondMax = num
+    }
+  },null)
+  return secondMax === -Infinity ? "No second largest" : secondMax;
+}
+
+console.log (findSecondLargest([10,9,10]))
