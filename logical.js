@@ -118,7 +118,7 @@ function removeDuplicate (str){
 
 console.log (removeDuplicate("ssdfgg"))
 
-// remove duplicate from an array using reduce method 
+// remove duplicate from an array 
 function removeDuplicate (arr){
   return arr.reduce((unique , current) =>{
     if (!unique.includes(current)){
@@ -128,4 +128,9 @@ function removeDuplicate (arr){
   },[])
 }
 
+console.log (removeDuplicate([1,2,3,3,2,1,4]))
+
+function removeDuplicate (arr){
+  return [...new Set(arr)]
+}
 console.log (removeDuplicate([1,2,3,3,2,1,4]))
