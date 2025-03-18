@@ -153,3 +153,22 @@ function findSecondLargest (arr){
 }
 
 console.log (findSecondLargest([10,9,10]))
+
+// sort it in descending 
+let cities = [
+    {name: 'Los Angeles', population: '15000'},
+    {name: 'New York', population: '25364'},
+    {name: 'Chicago', population: '6987'},
+    {name: 'Houston', population: '6544'},
+    {name: 'Philadelphia', population: '16206'},
+    {name: 'Boston', population: '4756'},
+    {name: 'Austin', population: '39256'},
+    {name: 'Dallas', population: '5684'},
+    {name: 'San Jose', population: '7778'},
+    {name: 'Las Vegas', population: '4452'},
+];
+
+function ascendingOrder (cities){ 
+    return cities.sort((a, b) => Number(b.population) - Number(a.population));
+}
+console.log(ascendingOrder(cities))
