@@ -135,6 +135,20 @@ function removeDuplicate (arr){
 }
 console.log (removeDuplicate([1,2,3,3,2,1,4]))
 
+
+// using for loop
+function uniqueNum (arr) {
+  let unique = []
+  for (let i = 0 ; i<arr.length ; i++){
+    if (!unique.includes(arr[i])){
+      unique.push(arr[i])
+    }
+  }
+  return unique.sort((a,b)=>a-b)
+}
+
+console.log(uniqueNum([1,1,2,2,3,4,5,6,6,7]))
+
 // second largest in an array
 function findSecondLargest (arr){
   let max = -Infinity
