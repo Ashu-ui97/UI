@@ -186,3 +186,11 @@ function ascendingOrder (cities){
     return cities.sort((a, b) => Number(b.population) - Number(a.population));
 }
 console.log(ascendingOrder(cities))
+
+// capitalize first letter of each word in a sentence
+function capitalize(str) {
+    return str.split(" ")
+    .map(word => word[0].toUpperCase()+word.slice(1)).join(" ")
+}
+
+console.log(capitalize("ashutosh swain"))
